@@ -21,14 +21,16 @@ app.listen(PORT, ()=>{
 app.use('/books', bookRoute);
 
 
+app.use(cors());
+
 //allow custom origins
-app.use(
-    cors({
-        origin:"http://localhost:3000",
-        methods:['GET','POST','PUT',"DELETE"],
-        allowedHeaders:['content-type'],
-    })
-);
+// app.use(
+//     cors({
+//         origin:"http://localhost:3000",
+//         methods:['GET','POST','PUT',"DELETE"],
+//         allowedHeaders:['content-type'],
+//     })
+// );
 
 
 mongoose
